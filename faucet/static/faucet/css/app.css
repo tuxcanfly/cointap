@@ -1,0 +1,28 @@
+h1 {
+	margin-top: 100px;
+}
+
+form {
+	margin: 20px 0;
+}
+
+footer {
+	color: #999;
+	font-size: small;
+	margin-bottom: 100px;
+}
+
+#share {
+	float: right;
+}
+
+#share div {
+	display: inline-block;
+	width: 100px !important;
+}
+
+#iframe {
+    height: 50em;
+    width: 100%;
+    pointer-events: none;
+}

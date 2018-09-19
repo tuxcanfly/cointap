@@ -1,0 +1,63 @@
+{% load render_bundle from webpack_loader %}
+{% load static %}
+<!doctype html>
+
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Handshake | Testnet Faucet</title>
+
+		<meta name="description" content="testnet faucet">
+		<meta name="keywords"    content="cryptocurrency, blockchain, faucet">
+
+        <link rel="stylesheet" href="{% static "faucet/css/foundation.css" %}">
+        <link rel="stylesheet" href="{% static "faucet/css/app.css" %}">
+        <link rel="stylesheet" href="{% static "faucet/css/gh-fork-ribbon.min.css" %}">
+	</head>
+    <body>
+
+        <div class="row">
+            <div class="large-12 columns">
+                <div id="content">
+                </div>
+                {% render_bundle 'main' %}
+
+                <hr>
+                <footer>
+                    <div id="share">
+                        <div><a class="github-button" href="https://github.com/tuxcanfly/cointap" aria-label="Star tuxcanfly/cointap on GitHub">Star</a></div>
+                        <div><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cointap.merkleblock.com/" data-text="#Bitcoin QR Code Generator" data-count="horizontal">Tweet</a></div>
+                        <div class="g-plusone" data-href="http://cointap.merkleblock.com/" data-size="medium" data-count="true"></div>
+                    </div>
+
+                    By <a href="http://tuxcanfly.me"><b>@tuxcanfly</b></a>. Donate Back HSK coins: ts1q2u8khznynfwf0jkp65jzfkd3fppqtwf6jmzkqj<em>&mdash; Thanks!</em>
+
+                    <br><br>
+
+                    <div class="small text-right">
+                        <p>Status: HSK, α, testnet</p>
+                    </div>
+                <footer>
+            </div>
+        </div>
+
+        <!-- GitHub -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <!-- Twitter -->
+        <script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+        <!-- Google Plus -->
+        <link href="https://plus.google.com/" rel="publisher"/>
+
+        <script type="text/javascript">
+            (function()
+                {var po = document.createElement("script");
+                po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+    </body>
+</html>

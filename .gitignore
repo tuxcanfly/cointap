@@ -1,0 +1,6 @@
+*.sqlite3
+webpack-stats.json
+assets/dist
+npm-debug.log
+/media
+/static
