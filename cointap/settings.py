@@ -53,6 +53,8 @@ COIN_FEE = float(os.environ.get("COINTAP_COIN_FEE", 1000))
 
 HTML_FILES = "html"
 
+CORS_ORIGIN_ALLOW_ALL = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -64,6 +66,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'corsheaders',
 
     'django_extensions',
     'webpack_loader',
@@ -74,6 +77,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
